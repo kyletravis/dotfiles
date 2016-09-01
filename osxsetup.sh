@@ -67,6 +67,7 @@ for version in $ruby_versions; do
 rvm install $version
 done
 
+
 # moar homebrew...
 brew install caskroom/cask/brew-cask
 brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
@@ -81,6 +82,9 @@ brew install \
   autoconf automake bash-completion cowsay cmatrix \
   ffmpeg figlet gettext go gpg freetype htop-osx jq libxml2 mongodb node \
   phantomjs postgres qt readline sqlite unrar v8 wget youtube-dl zsh
+
+# zsh goodies
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # brew cask fonts
 echo_warn "Installing fonts..."
